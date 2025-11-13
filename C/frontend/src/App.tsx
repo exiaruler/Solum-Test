@@ -53,7 +53,6 @@ function App() {
   const logout=():void=>{
     setLogin(false);
   }
-  //justify-content-md-center
   return (
     <div>
     <Container className="d-flex mt-5 Container">
@@ -81,9 +80,9 @@ function App() {
       </Col>
       :null}
       {login?
-      <Col  md={{ span: 6, offset: 3 }} xs={{ span: 10, offset: 1 }}>
+      <Col  md={{ span: 6, offset: 3 }} xs={{ span: 10, offset: 1 }} lg={{ span: 6, offset: 3 }}>
       <Row>
-      <Col className='justify-content-center mt-2' md={{ span: 8, offset: 2 }} xs={{ span: 11, offset: 1 }}>
+      <Col className='mt-2' md={{ span: 8, offset: 2 }} xs={{ span: 11, offset: 1 }}>
       <h1>Welcome {validCred.email}</h1>
       </Col>
       <Row>
