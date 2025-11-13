@@ -1,0 +1,16 @@
+.Input-Error{
+  color:red;
+  font-size: 0.8rem;
+  min-height: 1.0em;
+}
+.Container{
+  min-height: 100vh;
+  overflow-x: hidden;
+  border-style: solid;
+  border-width: 1px;
+  border-color: blue;
+  border-radius: 20px;
+  padding: 10px;
+
+}
+
