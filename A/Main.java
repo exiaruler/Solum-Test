@@ -14,6 +14,7 @@ public class Main {
     
     public static void main(String[] args) {
         List<Main> testCases = new ArrayList<>();
+        testCases.add(new Main(8, 101 ));
         testCases.add(new Main(1, 4 ));
         testCases.add(new Main(2, 5));
         testCases.add(new Main(3, 6));
@@ -22,7 +23,7 @@ public class Main {
 
         for(int i=0; i<testCases.size(); i++) {
             Main testCase = testCases.get(i);
-            int res= testCase.mysticWaves(testCase.number, testCase.waves);
+            int res= testCase.mysticWaves2(testCase.number, testCase.waves);
             //int resTest=testCase.mysticWaves2(testCase.number, testCase.waves);
             //System.out.println(resTest);
             System.out.println(res);

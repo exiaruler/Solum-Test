@@ -3,6 +3,7 @@ import './App.css';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import FormHandle from './components/FormHandle';
 import Input from './components/Input';
+import Welcome from './landing/Welcome';
 // login form interface
 interface LoginForm{
   email:string;
@@ -80,20 +81,7 @@ function App() {
       </Col>
       :null}
       {login?
-      <Col  md={{ span: 6, offset: 3 }} xs={{ span: 10, offset: 1 }} lg={{ span: 6, offset: 3 }}>
-      <Row>
-      <Col className='mt-2' md={{ span: 8, offset: 2 }} xs={{ span: 11, offset: 1 }}>
-      <h1>Welcome {validCred.email}</h1>
-      </Col>
-      <Row>
-      <Col xs={{ span: 2, offset: 5 }} md={{ span: 2, offset: 5 }} className='justify-content-center mt-3'>
-      <div>
-      <Button variant="outline-primary" onClick={logout}>Logout</Button>
-      </div>
-      </Col>
-      </Row>
-      </Row>
-      </Col>
+      <Welcome email={validCred.email} logout={logout}/>
       :null}
     </Row>
     </Container>
