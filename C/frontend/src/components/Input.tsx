@@ -1,4 +1,4 @@
-import { ChangeEventHandler, Component, createRef } from "react";
+import { ChangeEventHandler, Component } from "react";
 import { Button, Col, Form, Stack } from "react-bootstrap";
 interface InputProps{
     label:string;
@@ -26,6 +26,7 @@ export default class Input extends Component<InputProps,InputState>{
             
         };
     }
+    // hide/show password if type is password
     public showPass():void{
         if(this.state.type==='password'){
             this.setState({type:'text',passwordBtnCaption:'Hide'});

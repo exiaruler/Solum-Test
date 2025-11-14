@@ -4,6 +4,7 @@ interface WelcomeProps{
     email:string;
     logout:React.MouseEventHandler<HTMLButtonElement>;
 }
+// Welcome section
 export default function Welcome(props:WelcomeProps){
     return(
         <Col  md={{ span: 6, offset: 3 }} xs={{ span: 10, offset: 1 }} lg={{ span: 6, offset: 3 }}>

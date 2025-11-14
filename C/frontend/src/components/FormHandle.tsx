@@ -6,6 +6,7 @@ interface FormHandleProps{
 }
 // Form component to handle form submission
 export default class FormHandle extends Component<FormHandleProps>{
+    
     public submit(event:React.FormEvent<HTMLFormElement>):void{
         event.preventDefault();
         if(this.props.submit){

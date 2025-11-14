@@ -28,6 +28,7 @@ function App() {
     clearErrors();
     let email=loginForm.email.toLowerCase();
     let spChara=['@','$' ,'!','%','*','?','&','-','_'];
+    // check email first if it exists
     if(email===validCred.email){
       // validate password
       let passValid=validatePassword(loginForm.password);
@@ -42,9 +43,11 @@ function App() {
     }else setLoginForm({...loginForm,emailError:'Email not found'});
     
   }
+  // handle form input on change
   const onChange=(name:string,value:string):void=>{
     setLoginForm({...loginForm,[name]:value});
   }
+  // validate password regex
   const validatePassword=(password:string):boolean=>{
     let valid=false;
     let validCase =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_\-+=\[\]{};':"\\|,.<>/?])[A-Za-z\d@$!%*?&-_\-+=\[\]{};':"\\|,.<>/?]{8,16}$/
